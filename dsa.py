@@ -1,3 +1,5 @@
+
+#SET method in HT
 class HashTable:
     def __init__(self, size=7):
         self.size = size
@@ -30,3 +32,4 @@ my_hash_table.set_item('age', 30)
 my_hash_table.set_item('city', 'New York')
 
 my_hash_table.print_table()
+
