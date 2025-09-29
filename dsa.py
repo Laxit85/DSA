@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-#SET method in HT
-=======
 # set method og ht with collision handling
 >>>>>>> a40a7dc (Updated dsa.py with new code)
 class HashTable:
@@ -28,11 +25,6 @@ class HashTable:
         if self.data_map[index] is None:
             self.data_map[index] = []
         self.data_map[index].append([key, value])
-
-<<<<<<< HEAD
-=======
-
-
 #get method of ht with collision handling
 
     def get_item(self, key):
@@ -44,16 +36,11 @@ class HashTable:
                     return pair[1]
         return None
     
->>>>>>> a40a7dc (Updated dsa.py with new code)
-my_hash_table = HashTable()
 
 my_hash_table.set_item('name', 'Alice')
 my_hash_table.set_item('age', 30)
 my_hash_table.set_item('city', 'New York')
 
 my_hash_table.print_table()
-<<<<<<< HEAD
-
-=======
 print(my_hash_table.get_item('name'))  # Output: Alice
->>>>>>> a40a7dc (Updated dsa.py with new code)
+
