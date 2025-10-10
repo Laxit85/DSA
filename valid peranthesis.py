@@ -9,15 +9,20 @@ class Solution(object):
         stack = []
         mapping = {')': '(', '}': '{', ']': '['}
 
-        for char in s:
-            if char in mapping:
-                top_element = stack.pop() if stack else '#'
-                if mapping[char] != top_element:
+        for ch in s:
+            # If it's a closing bracket
+            if ch in mapping:
+                if stack and stack[-1] == mapping[ch]:
+                    stack.pop()
+                else:
                     return False
             else:
-                stack.append(char)
-
+                # It's an opening bracket
+                stack.append(ch)
+        
+        # If stack is empty → all brackets matched
         return not stack
+
 # Example usage:
 solution = Solution()
 print(solution.isValid("()"))        # Output: True
